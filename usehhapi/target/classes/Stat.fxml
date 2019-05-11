@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.usehhapi.Controllers.StatController">
+   <children>
+      <BorderPane fx:id="Bp" layoutX="203.0" layoutY="156.0" prefHeight="646.0" prefWidth="972.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="12.0" prefWidth="972.0" style="-fx-background-color: #3d4956;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="MenuButton" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="59.0" prefWidth="72.0" text=" " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fitHeight="73.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ActionMenu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <HBox alignment="CENTER" layoutX="69.0" layoutY="24.0" prefHeight="56.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label text="Ключевое слово вакансии: " textFill="WHITE">
+                           <font>
+                              <Font name="Microsoft YaHei" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="TextField" alignment="CENTER" styleClass="but" stylesheets="@field.css" unFocusColor="#eda678" />
+                        <JFXButton fx:id="Serach" alignment="CENTER" contentDisplay="TOP" prefHeight="82.0" prefWidth="80.0" text="Поиск" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons8_search_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Microsoft YaHei" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="URL" alignment="CENTER" contentDisplay="TOP" prefHeight="85.0" prefWidth="186.0" text="Обработанные Ссылки" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="56.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons8_document_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <BarChart fx:id="BarChart" BorderPane.alignment="CENTER">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
